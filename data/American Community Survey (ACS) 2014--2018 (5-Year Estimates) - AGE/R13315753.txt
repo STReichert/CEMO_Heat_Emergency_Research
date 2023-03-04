@@ -1,0 +1,153 @@
+--------------------------------------------------------------------------------
+Codebook for Social Explorer report ID: R13315753
+--------------------------------------------------------------------------------
+
+Contents
+    - Table Summary
+    - Data Dictionary
+    - Citation and Use
+
+
+--------------------------------------------------------------------------------
+Table Summary
+--------------------------------------------------------------------------------
+ 
+Survey:           ACS 2018 (5-Year Estimates)
+Dataset:          Social Explorer Tables: ACS 2018 (5-Year Estimates)
+Tables:
+
+      1. Age
+         Universe:  Total Population
+         Name:      A01001
+         Variables:
+            A01001_001:   Total Population:
+            A01001_002:      Under 5 Years
+            A01001_003:      5 to 9 Years
+            A01001_004:      10 to 14 Years
+            A01001_005:      15 to 17 Years
+            A01001_006:      18 to 24 Years
+            A01001_007:      25 to 34 Years
+            A01001_008:      35 to 44 Years
+            A01001_009:      45 to 54 Years
+            A01001_010:      55 to 64 Years
+            A01001_011:      65 to 74 Years
+            A01001_012:      75 to 84 Years
+            A01001_013:      85 Years and Over
+
+
+
+
+
+ 
+ 
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Variables 
+      FIPS:           FIPS
+      NAME:           Name of Area
+      QName:          Qualifying Name
+      STUSAB:         State/U.S.-Abbreviation (USPS)
+      SUMLEV:         Summary Level
+      GEOCOMP:        Geographic Component
+      FILEID:         File Identification
+      LOGRECNO:       Logical Record Number
+      US:             US
+      REGION:         Region
+      DIVISION:       Division
+      STATECE:        State (Census Code)
+      STATE:          State (FIPS)
+      COUNTY:         County
+      COUSUB:         County Subdivision (FIPS)
+      PLACE:          Place (FIPS Code)
+      PLACESE:        Place (State FIPS + Place FIPS)
+      TRACT:          Census Tract
+      BLKGRP:         Block Group
+      CONCIT:         Consolidated City
+      AIANHH:         American Indian Area/Alaska Native Area/Hawaiian Home Land (Census)
+      AIANHHFP:       American Indian Area/Alaska Native Area/Hawaiian Home Land (FIPS)
+      AIHHTLI:        American Indian Trust Land/Hawaiian Home Land Indicator
+      AITSCE:         American Indian Tribal Subdivision (Census)
+      AITS:           American Indian Tribal Subdivision (FIPS)
+      ANRC:           Alaska Native Regional Corporation (FIPS)
+      CBSA:           Metropolitan and Micropolitan Statistical Area
+      CSA:            Combined Statistical Area
+      METDIV:         Metropolitan Division
+      MACC:           Metropolitan Area Central City
+      MEMI:           Metropolitan/Micropolitan Indicator Flag
+      NECTA:          New England City and Town Combined Statistical Area
+      CNECTA:         New England City and Town Area
+      NECTADIV:       New England City and Town Area Division
+      UA:             Urban Area
+      UACP:           Urban Area Central Place
+      CDCURR:         Current Congressional District ***
+      SLDU:           State Legislative District Upper
+      SLDL:           State Legislative District Lower
+      VTD:            Voting District
+      ZCTA3:          ZIP Code Tabulation Area (3-digit)
+      ZCTA5:          ZIP Code Tabulation Area (5-digit)
+      SUBMCD:         Subbarrio (FIPS)
+      SDELM:          School District (Elementary)
+      SDSEC:          School District (Secondary)
+      SDUNI:          School District (Unified)
+      UR:             Urban/Rural
+      PCI:            Principal City Indicator
+      TAZ:            Traffic Analysis Zone
+      UGA:            Urban Growth Area
+      PUMA5:          Public Use Microdata Area - 5% File
+      PUMA1:          Public Use Microdata Area - 1% File
+      GEOID:          Geographic Identifier
+      BTTR:           Tribal Tract
+      BTBG:           Tribal Block Group
+      AREALAND:       Area (Land)
+      AREAWATR:       Area (Water)
+      A01001_001:     Total Population:
+      A01001_002:     Total Population: Under 5 Years
+      A01001_003:     Total Population: 5 to 9 Years
+      A01001_004:     Total Population: 10 to 14 Years
+      A01001_005:     Total Population: 15 to 17 Years
+      A01001_006:     Total Population: 18 to 24 Years
+      A01001_007:     Total Population: 25 to 34 Years
+      A01001_008:     Total Population: 35 to 44 Years
+      A01001_009:     Total Population: 45 to 54 Years
+      A01001_010:     Total Population: 55 to 64 Years
+      A01001_011:     Total Population: 65 to 74 Years
+      A01001_012:     Total Population: 75 to 84 Years
+      A01001_013:     Total Population: 85 Years and Over
+      PCT_A01001_002: % Total Population: Under 5 Years
+      PCT_A01001_003: % Total Population: 5 to 9 Years
+      PCT_A01001_004: % Total Population: 10 to 14 Years
+      PCT_A01001_005: % Total Population: 15 to 17 Years
+      PCT_A01001_006: % Total Population: 18 to 24 Years
+      PCT_A01001_007: % Total Population: 25 to 34 Years
+      PCT_A01001_008: % Total Population: 35 to 44 Years
+      PCT_A01001_009: % Total Population: 45 to 54 Years
+      PCT_A01001_010: % Total Population: 55 to 64 Years
+      PCT_A01001_011: % Total Population: 65 to 74 Years
+      PCT_A01001_012: % Total Population: 75 to 84 Years
+      PCT_A01001_013: % Total Population: 85 Years and Over
+
+
+
+
+--------------------------------------------------------------------------------
+Citation and Use of Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data
+  must cite it appropriately. The citation should include the following:
+
+	  www.socialexplorer.com
+	  New York City, NY: Social Explorer 2023
+
+
+* Citations should also include the URL for this report:
+
+    http://www.socialexplorer.com/pub/reportdata/HtmlResults.aspx?reportid=R13315753
+
+If you have any questions contact info@socialexplorer.com
