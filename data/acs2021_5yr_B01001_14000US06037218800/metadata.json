@@ -1,0 +1,212 @@
+{
+    "release": {
+        "id": "acs2021_5yr",
+        "years": "2017-2021",
+        "name": "ACS 2021 5-year"
+    },
+    "tables": {
+        "B01001": {
+            "title": "Sex by Age",
+            "universe": "Total Population",
+            "denominator_column_id": "B01001001",
+            "columns": {
+                "B01001001": {
+                    "name": "Total:",
+                    "indent": 0
+                },
+                "B01001002": {
+                    "name": "Male:",
+                    "indent": 1
+                },
+                "B01001003": {
+                    "name": "Under 5 years",
+                    "indent": 2
+                },
+                "B01001004": {
+                    "name": "5 to 9 years",
+                    "indent": 2
+                },
+                "B01001005": {
+                    "name": "10 to 14 years",
+                    "indent": 2
+                },
+                "B01001006": {
+                    "name": "15 to 17 years",
+                    "indent": 2
+                },
+                "B01001007": {
+                    "name": "18 and 19 years",
+                    "indent": 2
+                },
+                "B01001008": {
+                    "name": "20 years",
+                    "indent": 2
+                },
+                "B01001009": {
+                    "name": "21 years",
+                    "indent": 2
+                },
+                "B01001010": {
+                    "name": "22 to 24 years",
+                    "indent": 2
+                },
+                "B01001011": {
+                    "name": "25 to 29 years",
+                    "indent": 2
+                },
+                "B01001012": {
+                    "name": "30 to 34 years",
+                    "indent": 2
+                },
+                "B01001013": {
+                    "name": "35 to 39 years",
+                    "indent": 2
+                },
+                "B01001014": {
+                    "name": "40 to 44 years",
+                    "indent": 2
+                },
+                "B01001015": {
+                    "name": "45 to 49 years",
+                    "indent": 2
+                },
+                "B01001016": {
+                    "name": "50 to 54 years",
+                    "indent": 2
+                },
+                "B01001017": {
+                    "name": "55 to 59 years",
+                    "indent": 2
+                },
+                "B01001018": {
+                    "name": "60 and 61 years",
+                    "indent": 2
+                },
+                "B01001019": {
+                    "name": "62 to 64 years",
+                    "indent": 2
+                },
+                "B01001020": {
+                    "name": "65 and 66 years",
+                    "indent": 2
+                },
+                "B01001021": {
+                    "name": "67 to 69 years",
+                    "indent": 2
+                },
+                "B01001022": {
+                    "name": "70 to 74 years",
+                    "indent": 2
+                },
+                "B01001023": {
+                    "name": "75 to 79 years",
+                    "indent": 2
+                },
+                "B01001024": {
+                    "name": "80 to 84 years",
+                    "indent": 2
+                },
+                "B01001025": {
+                    "name": "85 years and over",
+                    "indent": 2
+                },
+                "B01001026": {
+                    "name": "Female:",
+                    "indent": 1
+                },
+                "B01001027": {
+                    "name": "Under 5 years",
+                    "indent": 2
+                },
+                "B01001028": {
+                    "name": "5 to 9 years",
+                    "indent": 2
+                },
+                "B01001029": {
+                    "name": "10 to 14 years",
+                    "indent": 2
+                },
+                "B01001030": {
+                    "name": "15 to 17 years",
+                    "indent": 2
+                },
+                "B01001031": {
+                    "name": "18 and 19 years",
+                    "indent": 2
+                },
+                "B01001032": {
+                    "name": "20 years",
+                    "indent": 2
+                },
+                "B01001033": {
+                    "name": "21 years",
+                    "indent": 2
+                },
+                "B01001034": {
+                    "name": "22 to 24 years",
+                    "indent": 2
+                },
+                "B01001035": {
+                    "name": "25 to 29 years",
+                    "indent": 2
+                },
+                "B01001036": {
+                    "name": "30 to 34 years",
+                    "indent": 2
+                },
+                "B01001037": {
+                    "name": "35 to 39 years",
+                    "indent": 2
+                },
+                "B01001038": {
+                    "name": "40 to 44 years",
+                    "indent": 2
+                },
+                "B01001039": {
+                    "name": "45 to 49 years",
+                    "indent": 2
+                },
+                "B01001040": {
+                    "name": "50 to 54 years",
+                    "indent": 2
+                },
+                "B01001041": {
+                    "name": "55 to 59 years",
+                    "indent": 2
+                },
+                "B01001042": {
+                    "name": "60 and 61 years",
+                    "indent": 2
+                },
+                "B01001043": {
+                    "name": "62 to 64 years",
+                    "indent": 2
+                },
+                "B01001044": {
+                    "name": "65 and 66 years",
+                    "indent": 2
+                },
+                "B01001045": {
+                    "name": "67 to 69 years",
+                    "indent": 2
+                },
+                "B01001046": {
+                    "name": "70 to 74 years",
+                    "indent": 2
+                },
+                "B01001047": {
+                    "name": "75 to 79 years",
+                    "indent": 2
+                },
+                "B01001048": {
+                    "name": "80 to 84 years",
+                    "indent": 2
+                },
+                "B01001049": {
+                    "name": "85 years and over",
+                    "indent": 2
+                }
+            }
+        }
+    }
+}
