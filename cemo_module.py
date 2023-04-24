@@ -98,3 +98,24 @@ def heat_index(t:float, rh:float) -> float:
             HI = HI + (((rh-85)/10)*((87-t)/5))
 
     return HI
+
+def heat_threshold(daily_high, high_thresh, daily_low=None, low_thresh=None):
+    """
+    Returns a heat day boolean based upon daily high and low heat index and manually set thresholds
+
+    Arguments:\n
+        daily_high: Numeric or dataframe column with daily high heat index\n
+        daily_low: Optional, numeric or dataframe column with daily low heat index\n
+        high_thresh: Numeric threshold to check for the daily high heat index\n
+        low_thresh: Optional, numeric integer to check daily low threshold against
+    """
+    if daily_low is not None:
+        if daily_high > high_thresh and daily_low > low_thresh:
+            return True
+        else:
+            return False
+    else:
+        if daily_high > high_thresh:
+            return True
+        else:
+            return False
