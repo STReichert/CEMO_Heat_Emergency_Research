@@ -3,13 +3,18 @@
 import pandas as pd
 import geopandas as gpd
 import numpy as np
-import osgeo.gdal
-from rasterstats import zonal_stats
-import rioxarray as rxr
-import rasterio as rio
-from affine import Affine
 import warnings
-warnings.filterwarnings("ignore", message="pandas.Int64Index") # needed to supress repeated future warning in loop https://github.com/GenericMappingTools/pygmt/issues/1946
+# Import raster interpolation dependencies
+try: # Gracefully handle missing dependencies on jupyterlab and UDS environments
+    import osgeo.gdal
+    from rasterstats import zonal_stats
+    import rioxarray as rxr
+    import rasterio as rio
+    from affine import Affine
+except:
+    warnings.warn('Optional heat interpolation dependencies not installed on this environment')
+
+warnings.filterwarnings("ignore", message="pandas.Int64Index") # supress future warning in loop https://github.com/GenericMappingTools/pygmt/issues/1946
 
 def interpolate_temp(temp_gdf:gpd.GeoDataFrame, district_shapes:gpd.GeoDataFrame, date:str, col:str):
     """
@@ -42,8 +47,9 @@ def interpolate_temp(temp_gdf:gpd.GeoDataFrame, district_shapes:gpd.GeoDataFrame
     rasterDs = None
     del rasterDs
 
-    ### For some reason GDAL creates a raster with unexpected affine transform that begins in lower left corner
-    ### we must create an affine transorm with a negative cell height and flip the array to read the data properly for zonal stats
+    ### GDAL creates a raster with affine transform that begins in lower left corner
+    ### Rasterstats expects transform begining in top left
+    ### we must create an affine transorm with a negative cell height and flip the array to read the data properly for zonalstats
 
     af = Affine(0.002003195255464829, 0.0, -118.66818799560865,
        0.0, -0.002475198135987511, 34.33730781636643)
@@ -119,3 +125,15 @@ def heat_threshold(daily_high, high_thresh, daily_low=None, low_thresh=None):
             return True
         else:
             return False
+        
+def streak(s:pd.Series):
+    """
+    Takes in a pandas series of boolean values and returns a series with a count of the number of cumulative true values.\n
+    For heat events series must be restricted to a specific district and in order of dates.
+
+    Arguments:
+        s: Ordered boolean Pandas series
+    
+    """
+    
+    return np.multiply(s, s.cumsum()).diff().where(lambda x:x<0).ffill().add(s.cumsum(), fill_value=0)
