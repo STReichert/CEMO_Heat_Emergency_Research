@@ -3,6 +3,7 @@
 import pandas as pd
 import geopandas as gpd
 import numpy as np
+import math
 import warnings
 # Import raster interpolation dependencies
 try: # Gracefully handle missing dependencies on jupyterlab and UDS environments
@@ -82,7 +83,7 @@ def heat_index(t:float, rh:float) -> float:
     """
     Calculate Heat Index or "Feels Like" temperature from air temperature and relative humidity
 
-    Arguments:
+    Arguments:\n
         t: air temperature\n
         rh: relative humidity\n
 
@@ -129,11 +130,23 @@ def heat_threshold(daily_high, high_thresh, daily_low=None, low_thresh=None):
 def streak(s:pd.Series):
     """
     Takes in a pandas series of boolean values and returns a series with a count of the number of cumulative true values.\n
-    For heat events series must be restricted to a specific district and in order of dates.
+    For heat events series must be restricted to a specific district and in order of dates.\n\n
 
     Arguments:
         s: Ordered boolean Pandas series
-    
+
+    Strategy from: https://joshdevlin.com/blog/calculate-streaks-in-pandas/
     """
     
     return np.multiply(s, s.cumsum()).diff().where(lambda x:x<0).ffill().add(s.cumsum(), fill_value=0)
+
+def heat_event(s:pd.Series):
+    """
+    Takes in a pandas series with the cumulative number of heat days (such as the output from cemo.streak function)
+    and returns a boolean series that indicates if a day is part of a heat event including streak values greater 
+    than 2 and the preceding streak value days of 1. \n\n
+    Requires to be series restricted to a specific distric and in ascending order of dates. \n\n
+    Arguments:\n
+        s: streak like pandas series with cumulative values of heat days.
+    """
+    return ((s>=2) + ((s==2).shift(-1))).fillna(0).astype(bool)
