@@ -22,7 +22,7 @@ def interpolate_temp(temp_gdf:gpd.GeoDataFrame, district_shapes:gpd.GeoDataFrame
     Takes in the the temperature dataframe, fire districts, date to slice by and column to interpolate
     Returns geodataframe in shape of districts_shapes with interpolated mean data for date and col
     
-    Arguments:
+    Arguments:\n
         temp_gdf: Geodataframe of weatherstations with data \n
         districts_shapes: GeoDataFrame of districts to interpolate to \n
         date: date to slice temp_gdf by \n
@@ -132,7 +132,7 @@ def streak(s:pd.Series):
     Takes in a pandas series of boolean values and returns a series with a count of the number of cumulative true values.\n
     For heat events series must be restricted to a specific district and in order of dates.\n\n
 
-    Arguments:
+    Arguments: \n
         s: Ordered boolean Pandas series
 
     Strategy from: https://joshdevlin.com/blog/calculate-streaks-in-pandas/
@@ -145,7 +145,9 @@ def heat_event(s:pd.Series):
     Takes in a pandas series with the cumulative number of heat days (such as the output from cemo.streak function)
     and returns a boolean series that indicates if a day is part of a heat event including streak values greater 
     than 2 and the preceding streak value days of 1. \n\n
-    Requires to be series restricted to a specific distric and in ascending order of dates. \n\n
+
+    Requires the series to be restricted to a specific distric and in ascending order of dates. \n\n
+
     Arguments:\n
         s: streak like pandas series with cumulative values of heat days.
     """
